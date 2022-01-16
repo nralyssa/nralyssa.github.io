@@ -1,0 +1,230 @@
+<html lang="en">
+<head>
+<title>Gallery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css.css">
+<link rel="shortcut icon" href="Image/favicon_io/android-chrome-192x192.png">
+<link rel="stylesheet" href="Gallery.css">
+<style>
+  * {
+  box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }    
+</style>        
+</head>
+  
+<body>
+  <style>
+    body
+      {
+      background-image: url("Image/Gallerybg.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;        
+    } 
+  </style>
+
+<!--Header-->
+<div class="header">
+  <h1>Gallery</h1>
+  <h4>created by Nur Alyssa Syafiqah bt Zainon</h4>
+  <p style="text-align: center;">This page was last modified <span id="demo"></span></p>
+      <a href="https://twitter.com/huethue" target="_blank" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/xlyss4_/?hl=en" target="_blank" class="fa fa-instagram"></a>
+      <a href="https://compose.mail.yahoo.com/?to=nuralyssa.syafiqah@yahoo.com" class="fa fa-yahoo" target="_blank"></a>
+
+      <script>
+          document.getElementById("demo").innerHTML = document.lastModified;
+      </script>
+</div>
+
+<!--NavBar-->
+<div class="topnav" id="myTopnav">
+  <img style="float: right;"src="Image/Logo.png" alt="Logo"
+  width="80"
+  height="80">
+  <a href="index.html" class="active">Home</a>
+  <div class="dropdown">
+      <button class="dropbtn">About Me</button>
+      <div class="dropdown-content">
+        <a href="Profile.html" target="_blank">Profile</a>
+        <a href="Education.html" target="_blank" >Education </a>
+        <a href="Family.html" target="_blank" >Family </a>
+        <a href="Experience.html" target="_blank">Experience </a>
+      </div>
+  </div>
+  <a href="Gallery.html"> Gallery</a>
+  <a href="Acknowledgement.html">Acknowledgement </a>
+
+</div>
+
+<script>
+  function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+  x.className += " responsive";
+  } else {
+  x.className = "topnav";
+    }
+  }
+</script>
+
+<br>      
+  <!--digital time-->             
+<div class="time">
+<!--for time-->
+<div class="hms"></div>
+<!--For AM/PM-->
+<div class="ampm"></div>
+<!--For date-->
+  <div class="date"></div>
+</div>
+
+
+<!--Add js code-->
+<script>
+  function updateTime(){
+  var dateInfo = new Date();
+
+/* time*/
+  var hr,
+  _min = (dateInfo.getMinutes() <10) ? "0" + dateInfo.getMinutes() : dateInfo.getMinutes(),
+  sec = (dateInfo.getSeconds() <10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
+  ampm = (dateInfo.getHours() >= 12) ? "PM" : "AM";
+
+// replace 0 with 12 at midnight, subject 12 form hour if 13-23
+
+  if(dateInfo.getHours()== 0){
+  hr =12;
+  } else if (dateInfo.getHours() > 12){
+  hr = dateInfo.getHours() - 12;
+  } else{
+  hr = dateInfo.getHours();
+  }
+   
+// current time
+  var currentTime = hr + ":" + _min + ":" + sec;
+
+//print time
+  document.getElementsByClassName("hms")[0].innerHTML = currentTime;
+  document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+
+/* date */
+  var dow = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+   ],
+
+  month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ],
+  day = dateInfo.getDate();
+  year = dateInfo.getFullYear();
+
+  //store date
+  var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + " " + day + ", " + year; 
+  document.getElementsByClassName("date")[0].innerHTML = currentDate;
+
+}; 
+
+//print time and date once, then update then every second
+
+  updateTime();
+  setInterval(function(){
+  updateTime()
+  }, 1000);
+
+</script>
+
+
+<h1> Welcome To My Gallery</h1>
+
+<style>
+      
+  div { text-align: justify;
+    text-justify: inter-word;
+  }
+</style>
+<!--content of left side-->
+    <div class="center">
+      <style>
+        div { text-align: center;
+                        }
+      </style>
+                                   
+      <h2> Hello user &#129409; </h2> 
+      <b>This is my personal gallery.</b>
+      <p> The picture that I put here was mostly captured by me. Hopefully, you able to enjoy it.</p>
+    </div>
+
+    <audio controls>
+      <source src="Audio/Howl's Moving Castle Theme [Piano Tutorial] (Synthesia) _ Fontenele NXT.mp3"
+      type="audio/mpeg">  
+    </audio>
+      <p><a href= "https://www.youtube.com/watch?v=QCNVEsk3pcw" target="_blank">by Marioverehrer </a></p>
+       
+<!-- Photo Grid -->
+    <div class="row1"> 
+      <div class="column">
+        <img src="Image/IMG-20160831-WA0010.jpg" style="width:100%">
+        <img src="Image/IMG_20200717_172113.jpg" style="width:100%">
+        <img src="Image/IMG_gbzc9p.jpg" style="width:100%">
+        <img src="Image/IMG_20211219_134221.jpg" style="width:100%">
+        <img src="Image/IMG_20211015_193728.jpg" style="width:100%">
+    </div>
+
+      <div class="column">
+        <img src="Image/IMG_20211023_184443.jpg" style="width:100%">
+        <img src="Image/IMG_20211023_224636_260.jpg" style="width:100%">
+        <img src="Image/IMG_20211230_010213_099.jpg" style="width:100%">
+        <img src="Image/IMG-20160831-WA0010.jpg" style="width:100%">
+        <img src="Image/IMG_imupvw.jpg" style="width:100%">
+        <img src="Image/IMG_20160206_144015.jpg" style="width:100%"> 
+      </div>  
+
+      <div class="column">
+        <img src="Image/IMG_20200625_230626_472.JPG" style="width:100%">
+        <img src="Image/MVIMG_20200223_214939.jpg" style="width:100%">
+        <img src="Image/mmexport1416323728437.jpg" style="width:100%">
+        <img src="Image/IMG_20190113_165345.jpg" style="width:100%">
+        <img src="Image/IMG_20190113_163601.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="Image/12033033_897385546997326_1090194593786887481_n.jpg" style="width:100%">
+        <img src="Image/857412441_295288.jpg" style="width:100%">
+        <img src="Image/IMG_20160206_143916.jpg" style="width:100%">
+        <img src="Image/2016-03-24 09.36.08 1.jpg" style="width:100%">
+        <img src="Image/IMG_20200823_134653.jpg" style="width:100%">
+      </div>
+    
+    <br>
+  
+  <!--Footer-->
+    <div class="footer">
+        <p>Copyright 2022 Nur Alyssa Syafiqah Zainon </p>
+    </div>
+  </body>   
+</html>

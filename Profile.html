@@ -1,0 +1,422 @@
+<html lang="en">
+<head>
+        <title> Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css.css">
+        <link rel="shortcut icon" href="Image/favicon_io/android-chrome-192x192.png">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="Profile.css">        
+        <style>
+           * {
+                box-sizing: border-box;
+            }
+            body {
+               margin: 0;
+               font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+        </head>
+        <body>
+            <style>
+                body
+                {
+                    background-image: url("Image/Profilebg.png");
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: cover;        
+                } 
+            </style>
+
+<!--Header-->
+
+<div class="header">
+    <h1>Profile</h1>
+    <h4>created by Nur Alyssa Syafiqah bt Zainon</h4>
+    <p style="text-align: center;">This page was last modified <span id="demo"></span></p>
+        <a href="https://twitter.com/huethue" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/xlyss4_/?hl=en" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://compose.mail.yahoo.com/?to=nuralyssa.syafiqah@yahoo.com" class="fa fa-yahoo" target="_blank"></a>
+
+    <script>
+        document.getElementById("demo").innerHTML = document.lastModified;
+    </script>
+</div>
+
+<!--NavBar-->
+    <div class="topnav" id="myTopnav">
+        <img style="float: right;"src="Image/Logo.png" alt="Logo"
+        width="80"
+        height="80">
+        <a href="index.html" class="active">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About Me</button>
+            <div class="dropdown-content">
+                <a href="Profile.html" target="_blank">Profile</a>
+                <a href="Education.html" target="_blank" >Education </a>
+                <a href="Family.html" target="_blank" >Family </a>
+                <a href="Experience.html" target="_blank">Experience </a>  
+              </div>
+        </div>
+                <a href="Gallery.html"> Gallery</a>
+                <a href="Acknowledgement.html">Acknowledgement </a>       
+    </div>
+
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+            }
+        </script>
+        
+        <br>
+        <!--Time-->
+
+        <div class="time">
+            <!--for time-->
+            <div class="hms"></div>
+            <!--For AM/PM-->
+            <div class="ampm"></div>
+            <!--For date-->
+            <div class="date"></div>
+       </div>
+ 
+ 
+       <!--Add js code-->
+       <script>
+         function updateTime(){
+           var dateInfo = new Date();
+ 
+           /* time*/
+             var hr,
+             _min = (dateInfo.getMinutes() <10) ? "0" + dateInfo.getMinutes() : dateInfo.getMinutes(),
+             sec = (dateInfo.getSeconds() <10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
+             ampm = (dateInfo.getHours() >= 12) ? "PM" : "AM";
+ 
+            // replace 0 with 12 at midnight, subject 12 form hour if 13-23
+ 
+            if(dateInfo.getHours()== 0){
+               hr =12;
+            } else if (dateInfo.getHours() > 12){
+                 hr = dateInfo.getHours() - 12;
+            } else{
+                 hr = dateInfo.getHours();
+            }
+             
+            // current time
+            var currentTime = hr + ":" + _min + ":" + sec;
+ 
+            //print time
+            document.getElementsByClassName("hms")[0].innerHTML = currentTime;
+            document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+
+
+             
+ 
+             /* date */
+            var dow = [
+                "Sunday",
+               "Monday",
+               "Tuesday",
+               "Wednesday",
+               "Thursday",
+               "Friday",
+               "Saturday"
+             ],
+ 
+            month = [
+               "January",
+               "February",
+               "March",
+               "April",
+               "May",
+               "June",
+               "July",
+               "August",
+               "September",
+               "October",
+               "November",
+               "December"
+            ],
+            day = dateInfo.getDate();
+            year = dateInfo.getFullYear();
+ 
+             //store date
+            var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + " " + day + ", " + year; 
+ 
+            document.getElementsByClassName("date")[0].innerHTML = currentDate;
+ 
+         }; 
+ 
+         //print time and date once, then update then every second
+ 
+        updateTime();
+        setInterval(function(){
+        updateTime()
+        }, 1000);
+ 
+       </script>
+
+<!--Layout-->
+<div class="row">
+    <div class="side">
+        <div class="center">
+            <style>
+            div { text-align: justify;
+            }
+            </style>
+       
+    <h3 style= "font-family: monospace; text-align: center;">This is my profile. </h3>
+
+    <video style="display:block; margin-left: auto; margin-right: auto;" width="200" height="200" controls>
+        <source src="Video/lv_0_20220112025017.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <br>
+        </div>
+
+        <div class="center">
+            <h3 style="text-align: center;" >Credits</h3>
+            <p style="text-align:justify; font-size: 17px;font-family: monospace;">Prepared by: Nur Alyssa Syafiqah Binti Zainon
+            <p style="text-align:justify; font-size: 17px; font-family: monospace;"> Group: N5IM1105G </p>
+            <p style="text-align:justify; font-size: 17px; font-family: monospace;">Prepared for: Seri Intan Idayu Shahrul Asari</p>
+         </p>
+        </div>  
+
+        <audio controls>
+            <source src="Audio/Tokyo Ghoul OP - Unravel [Piano_Animenz arr].mp3"
+            type="audio/mpeg">  
+        </audio>
+        
+        <p><a href= "https://www.youtube.com/watch?v=xFMPBPOy9SI" target="_blank">by we4ve </a></p>      
+    </div>
+
+        <div class="main">
+            <div class="center">
+                <div class="w3-container w3-center w3-animate-bottom"></div>
+                        <style>
+                        div { text-align: justify;
+                        }
+                        </style>
+
+                    <h2 style="text-align: center;" >Profile</h2>
+                    <img class="zoom" style="display:block; margin-left: auto; margin-right: auto;" src="Image/Me.jpg" width="200" height="200" >
+        <br> 
+        
+        <br>
+                    <ul>
+                        <li>Full name: Nur Alyssa Syafiqah Binti Zainon</li>
+                        <li>Nickname: Syaf, Alyssa, Pika</li>
+                        <li>Date of Birth: 30<sup>th</sup> September 2001</li>
+                        <li>Place of Birth: Pusrawi Sungai Buloh</li>
+                        <li>Job: Full time student in Diploma of Information Management</li>
+                    </ul>
+            </div>
+    
+ 
+    <!--Favourite-->   
+
+    <h2>My Favourite</h2>
+    
+    <style>
+        
+        div { text-align: left;
+        }
+    </style>
+
+        <button class="accordion">Food</button>
+    
+            <div class="panel">
+                <p> This is the food that I like so far:</p>
+                <ul id="Food">
+                    <li class="p">Steak</li>
+                    <li class="p">Lamb</li>
+                    <li class="p">Omellete</li>
+                    <li class="p">Kuey Teow Kungfu</li>
+                    <li class="p">Mexico Bun</li>
+                </ul>
+            </div>
+
+        <button class="accordion">Drink</button>
+            <div class="panel">
+                <p>This is mostly the drinks that I have been drink daily:</p>
+                <dl>
+                    <dt>Tea</dt>
+                    <dd>- Green Tea</dd>
+                    <dd>- Black Tea</dd>
+                    <dd>- Chrysanthemun Tea</dd>
+                    
+                    <br>
+
+                    <dt>Coffee</dt>
+                    <dd>- Caffe Latte</dd>
+                    <dd>- Caffe Mocha</dd>
+                    <dd>- Cappuccino</dd>
+
+                    <br>
+
+                    <dt>Nestle Milo UHT</dt>
+               </dl>
+            </div>
+
+        <button class="accordion">Drama</button>
+            <div class="panel">
+                <p>I like watch a lots of drama from various countries such as China, Korea and Japan include:</p> 
+                    <ul id="drama">
+                        <li>
+                            <p>The Long Ballad</p>
+                        </li>
+                    
+                        <li>
+                            <p>Maiden Holmes</p>
+                        </li>
+                    
+                        <li>
+                            <p>Kill Me Heal Me</p>
+                        </li>
+                    
+                        <li>
+                            <p>Hyde Jekyll, Me</p>
+                        </li>
+                    
+                        <li>
+                            <p>For You in Full Blossom - Ikemen Paradise</p>
+                        </li>
+                    </ul>
+            </div>
+
+        <button class="accordion">Kpop Group</button>
+            <div class="panel">
+                <p> I have been listen to kpop song for 11 years. Because of that, there are a lots of group that I like and listen frequently.
+                    This is include:</p>
+                
+                <ol type="I">
+                    <li>Ateez</li>
+                    <li>Bigbang</li>
+                    <li>Dreamcatcher</li>
+                    <li>Oneus</li>
+                    <li>Shinhwa</li>
+                    <li>Super Junior</li>
+                    <li>Shinee</li>
+                    <li>Victon</li>
+                </ol>
+            </div>
+
+        <button class="accordion">Song</button>
+            <div class="panel">
+                <p>There are a lots of song that i like as I listen to song frequently and some of them were my healing song.</p> 
+                <ul id="song">
+                    
+                    <il>
+                        <p>Better - Ateez</p>
+                    </il>
+                    
+                    <il>
+                        <p>Hall of Fame- The Script</p>
+                    </il>
+                    
+                    <il>
+                        <p>Fly High - Burnout Syndrome</p>
+                    </il>
+                    
+                    <il>
+                        <p>Wadachi - Spyair</p>
+                    </il>
+                    
+                    <il>
+                        <p>Sunrise - Ateez</p>
+                    </il>
+                </ul>
+            </div>
+
+            <h2>My hobbies</h2>
+            <style>
+                div { text-align: left;
+                 }
+            </style>
+         
+            <button class="accordion">Surf Internet</button>
+             
+            <div class="panel">
+                 <p>
+                    Basically, I spent my day on the internet more than my social media.
+                    I like surfing internet especially when there are lots of new information that I get randomly from social media. For example, 
+                    I search about the cases of Covid-19 and new variants which able to give more awareness regarding the virus around me.  
+                 </p>
+                 
+            </div>
+         
+            <button class="accordion">Study Language</button>
+                <div class="panel">
+                    <p>I like learning language since I was form 3. This is because since I was a kid, i already expose with the drama and movie from another
+                         countries especially Japan. So, from there, I decided to learn language. There are lots of challenging in studying language as I study it 
+                         by myself. the language that I have learnt so far:
+                    </p> 
+
+                    <ul id="language">
+                        <li>
+                            <p>Japanese</p>
+                        </li>
+                         
+                        <li>
+                            <p>Mandarin</p>
+                        </li>
+                        
+                        <li>
+                            <p>French</p>
+                        </li>
+                        
+                        <li>
+                            <p>Korean</p>
+                        </li>
+                    </ul>
+                </div>
+         
+             <button class="accordion">Watch Drama</button>
+                 <div class="panel">
+                     <p>When I have some free time, I will spent my time on the drama. Mostly, I like to watch some Chinese Historical drama and Korean Drama. 
+                        I like the drama especially when it with the genre of mysterious, which make me participate to crack some clue or hint in that drama.</p></div>
+   
+        </div>
+
+        
+    <script>
+        var acc =
+        document.getElementsByClassName("accordion");
+        var i;
+
+        for(i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";   
+        } else {
+        panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</div>
+
+
+    <br>
+
+ <!--Footer-->
+ <div class="footer">
+    <p>Copyright 2022 Nur Alyssa Syafiqah Zainon </p>
+    
+</div>
+
+
+</body>        
+ 
+</html>

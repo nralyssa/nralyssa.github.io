@@ -1,0 +1,214 @@
+<html>  
+<head>
+<title>Acknowledgement</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css.css">
+<link rel="shortcut icon" href="Image/favicon_io/android-chrome-192x192.png">
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    </style>
+</head>
+
+<body>
+  <!--Header-->
+    <div class="header">
+        <h1>Acknowledgement</h1>
+            <h4>created by Nur Alyssa Syafiqah bt Zainon</h4>
+               <p style="text-align: center;">This page was last modified <span id="demo"></span></p>
+               <a href="https://twitter.com/huethue" target="_blank" class="fa fa-twitter"></a>
+               <a href="https://www.instagram.com/xlyss4_/?hl=en" target="_blank" class="fa fa-instagram"></a>
+               <a href="https://compose.mail.yahoo.com/?to=nuralyssa.syafiqah@yahoo.com" class="fa fa-yahoo" target="_blank"></a>
+            
+                <script>
+                    document.getElementById("demo").innerHTML = document.lastModified;
+                </script>
+    </div>
+        
+    <!--NavBar-->
+    <div class="topnav" id="myTopnav">
+        <img style="float: right;"src="Image/Logo.png" alt="Logo"
+        width="80"
+        height="80">
+            
+        <a href="index.html" class="active">Home</a>
+           
+        <div class="dropdown">
+            <button class="dropbtn">About Me</button>
+                <div class="dropdown-content">
+                    <a href="Profile.html" target="_blank">Profile</a>
+                    <a href="Education.html" target="_blank" >Education </a>
+                    <a href="Family.html" target="_blank" >Family </a>
+                    <a href="Experience.html" target="_blank">Experience </a>
+                    
+                </div>
+        </div>
+               
+        <a href="Gallery.html"> Gallery</a>
+        <a href="Acknowledgement.html">Acknowledgement </a>
+        
+    </div>
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+                }
+            }
+        </script>
+        
+    <br>  
+
+    <style>
+        body
+        {
+            background-image: url("Image/Ackbg.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; 
+            height: auto;
+            width: auto;
+                   
+        } 
+    </style>
+        <style>
+        .center {
+          margin: auto;
+          width: 60%;
+          border: 3px solid #55b7cf;
+          padding: 10px;
+          background-color: rgb(96, 82, 119);
+          
+        }
+        </style>
+        
+        </head>
+        <body>
+
+        <br>
+        
+        <div class="time">
+            <!--for time-->
+            <div class="hms"></div>
+            <!--For AM/PM-->
+            <div class="ampm"></div>
+            <!--For date-->
+            <div class="date"></div>
+        </div>
+     
+     
+        <!--Add js code-->
+        <script>
+            function updateTime(){
+            var dateInfo = new Date();
+     
+        /* time*/
+            var hr,
+            _min = (dateInfo.getMinutes() <10) ? "0" + dateInfo.getMinutes() : dateInfo.getMinutes(),
+            sec = (dateInfo.getSeconds() <10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
+            ampm = (dateInfo.getHours() >= 12) ? "PM" : "AM";
+     
+        // replace 0 with 12 at midnight, subject 12 form hour if 13-23
+     
+            if(dateInfo.getHours()== 0){
+            hr =12;
+            } else if (dateInfo.getHours() > 12){
+            hr = dateInfo.getHours() - 12;
+            } else{
+            hr = dateInfo.getHours();
+           }
+                 
+        // current time
+            var currentTime = hr + ":" + _min + ":" + sec;
+        //print time
+            document.getElementsByClassName("hms")[0].innerHTML = currentTime;
+            document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+        /* date */
+            var dow = [
+               "Sunday",
+               "Monday",
+               "Tuesday",
+               "Wednesday",
+               "Thursday",
+               "Friday",
+               "Saturday"
+            ],
+     
+            month = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ],
+            day = dateInfo.getDate();
+            year = dateInfo.getFullYear();
+     
+            //store date
+            var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + " " + day + ", " + year; 
+            document.getElementsByClassName("date")[0].innerHTML = currentDate;
+            }; 
+     
+            //print time and date once, then update then every second
+     
+            updateTime();
+            setInterval(function(){
+            updateTime()
+            }, 1000);
+     
+        </script>
+        <br>           
+
+        <audio controls autoplay>
+            <source src="Audio/ATEEZ - Deja Vu _ Piano Cover by Pianella Piano (1).mp3"
+            type="audio/mpeg">   
+            Your browser does not support the audio element.
+        </audio>
+              
+        <br>
+        <p><a href= "https://youtu.be/fxAxkiPPf5M" target="_blank" style="color: black;" >by Pianella Piano </a></p>
+        
+        <div class="center">
+            <style>
+                div { text-align: justify;
+                text-justify: inter-word;
+                }
+            </style>
+
+<br>
+
+        <h2 style="text-align: center; color: rgb(250, 250, 250);">Acknowledgement</h2>
+            <p style="line-height: 1.5;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 18px; color: azure; word-spacing: 2;">Assalamualaikum Waramatullahi Wabarakatuh, 
+            I wish to express my gratitude to Madam Seri Intan for teaching in my class for this semester for the subject References and Information Services for Information Agencies, IMD312 until the end of semester.  
+            Through the assignment that has been assigned, I was able to learn the ways to make a websites through HTML which give an opportunity 
+            to me to learn more and explore about the world of HTML that has been done. 
+            In addition, Madam provided many consultations and guides until I was able to complete the assignment successfully. 
+            I really hope that this assignment is able to follow the requirements that have been given.
+
+            In addition, I want to give my gratitude to my family as they are my sources of motivation and keep supporting and giving suggestions to me through the process of incomplete assignments. 
+            
+            Last but not least, I am grateful to have wonderful friends that give me a lot of strength and courage until I am able to complete the assignment within the due date that has been given. 
+            </p>
+        </div>
+        <br>
+
+<!--Footer-->
+    <div class="footer">
+        <p>Copyright 2022 Nur Alyssa Syafiqah Zainon </p>   
+    </div>
+</body>
+</html>

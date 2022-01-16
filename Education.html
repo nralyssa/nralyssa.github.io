@@ -1,0 +1,760 @@
+<html lang="en">
+<head>
+<title> Education Background</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css.css">
+<link rel="shortcut icon" href="Image/favicon_io/android-chrome-192x192.png">
+<link rel="stylesheet" href="Education.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+    </style>
+</head>
+<body>
+    <style>
+        body
+            {
+            background-image: url("Image/Edubg.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;} 
+    </style>
+
+<!--Header-->
+<div class="header">
+    <h1>Education Background</h1>
+    <h4>created by Nur Alyssa Syafiqah bt Zainon</h4>
+    <p style="text-align: center;">This page was last modified <span id="demo"></span></p>
+    <a href="https://twitter.com/huethue" target="_blank" class="fa fa-twitter"></a>
+    <a href="https://www.instagram.com/xlyss4_/?hl=en" target="_blank" class="fa fa-instagram"></a>
+    <a href="https://compose.mail.yahoo.com/?to=nuralyssa.syafiqah@yahoo.com" class="fa fa-yahoo" target="_blank"></a>
+
+    <script>
+        document.getElementById("demo").innerHTML = document.lastModified;
+    </script>
+</div>
+
+<!--NavBar-->   
+<div class="topnav" id="myTopnav">
+    <img style="float: right;"src="Image/Logo.png" alt="Logo"
+    width="80"
+    height="80">
+        
+    <a href="index.html" class="active">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About Me</button>
+            <div class="dropdown-content">
+              <a href="Profile.html" target="_blank">Profile</a>
+              <a href="Education.html" target="_blank" >Education </a>
+              <a href="Family.html" target="_blank" >Family </a>
+              <a href="Experience.html" target="_blank">Experience </a>
+          </div>
+        </div>
+        <a href="Gallery.html"> Gallery</a>
+        <a href="Acknowledgement.html">Acknowledgement </a>
+    
+</div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
+    </script>
+    
+    <br>
+              
+ <!--digital time-->       
+
+ 
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
+    </script>
+    <br> 
+        <div class="time">
+            <!--for time-->
+            <div class="hms"></div>
+            <!--For AM/PM-->
+            <div class="ampm"></div>
+            <!--For date-->
+            <div class="date"></div>
+        </div>
+     
+        <!--Add js code-->
+        <script>
+            function updateTime(){
+            var dateInfo = new Date();
+     
+           /* time*/
+            var hr,
+            _min = (dateInfo.getMinutes() <10) ? "0" + dateInfo.getMinutes() : dateInfo.getMinutes(),
+            sec = (dateInfo.getSeconds() <10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
+            ampm = (dateInfo.getHours() >= 12) ? "PM" : "AM";
+     
+            // replace 0 with 12 at midnight, subject 12 form hour if 13-23
+     
+            if(dateInfo.getHours()== 0){
+            hr =12;
+            } else if (dateInfo.getHours() > 12){
+            hr = dateInfo.getHours() - 12;
+            } else{
+            hr = dateInfo.getHours();
+            }
+                 
+            // current time
+            var currentTime = hr + ":" + _min + ":" + sec; 
+            //print time
+            document.getElementsByClassName("hms")[0].innerHTML = currentTime;
+            document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+                    
+            /* date */
+            var dow = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+            ],
+     
+            month = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+            ],
+            day = dateInfo.getDate();
+            year = dateInfo.getFullYear();
+     
+            //store date
+            var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + " " + day + ", " + year; 
+            document.getElementsByClassName("date")[0].innerHTML = currentDate;
+            }; 
+     
+            //print time and date once, then update then every second
+     
+            updateTime();
+            setInterval(function(){
+            updateTime()
+            }, 1000);
+     
+        </script>
+     
+   
+
+    <!--content of left side-->
+        
+<div class="row">
+    <div class="side">
+        <div class="center">
+            <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/giphy.gif" alt="Study"
+            width="150"
+            height="100">
+
+            <style>
+                div { text-align: justify;}
+            </style>
+
+            <div class="w3-container w3-center w3-animate-bottom">
+                <p style="text-align: justify;">I have been through three stages of education in Malaysia including Primary, Secondary and Tertiary education. 
+                    Right now, I am pursuing my Diploma in Information Management at UiTM branch Negeri Sembilan, Campus Rembau. 
+                    Beside that, this is my last year as a student on this campus and hopefully I will be able to continue my study in Degree in Future.
+                </p>                                                                    
+            </div>             
+        </div>
+            
+        <div class="center">
+            <h3 style="text-align: center;" >Credits</h3>
+            <p style="text-align:justify; font-size: 17px;font-family: monospace;">Prepared by: Nur Alyssa Syafiqah Binti Zainon </p>
+            <p style="text-align:justify; font-size: 17px; font-family: monospace;"> Group: N5IM1105G </p>
+            <p style="text-align:justify; font-size: 17px; font-family: monospace;">Prepared for: Seri Intan Idayu Shahrul Asari</p>
+            
+        </div>  
+        
+        <audio controls autoplay>
+            <source src="Audio/[FULL] Fuyu no Hanashi _ Mafuyu's Song - Given Episode 9 Insert Song - Piano Arrangement [Synthesia].mp3"
+            type="audio/mpeg"> 
+            Your browser does not support the audio element.
+        </audio>
+        <p><a href= "https://www.youtube.com/watch?v=0uF6bDuSISY" target="_blank">by zzz - Anime on Piano </a></p>
+
+    </div>
+
+    <!--Content in main layout-->
+    <div class="main">
+        <div class="center">
+           
+            
+              <!--Primary School--> 
+            <div class="w3-container w3-center w3-animate-zoom">
+                <div class="main" id="section1"> 
+
+                    <div class="right">
+                        <a href="#section2" class="next">Next</a>
+                    </div>
+
+                    <h2 style="text-align: center;"> Primary School</h2>
+                    <p>  There are two school that I enroll when I was in Primary School. One is Primary School and another one were Religious School.
+                    The following were all my school that I have been attended: </p>
+                    <h3> <i>Sekolah Kebangsaan Seksyen 7 Kota Damansara.</i></h3>
+
+                    <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/1.png"
+                    height="200"
+                    width="200">
+
+                    <br>
+                
+                    <p style="font-size: 17px;">This is the class that I have been when I was in Primary School:</p>
+                
+                    <br>
+                
+                    <div class="rowT">
+                        <div class="columnT">
+                            <table>
+                                <tr>
+                                    <th>Year</th>  
+                                    <th>Class</th>
+                                </tr>
+                            
+                                <tr>
+                                    <td>2008</td>
+                                    <td>1 Budi</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2009</td>
+                                    <td>2 Hormat</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2010</td>
+                                    <td>3 Cekap</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2011</td>
+                                    <td>4 Cekap</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2012</td>
+                                    <td>5 Azam</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2013</td>
+                                    <td>6 Azam</td>
+                                </tr>
+
+                            </table>
+                       
+                        <br>
+
+                        <h3> <i>Sekolah Rendah Agama Seksyen 7 Kota Damansara.</i>
+
+                        <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/SRAS7.png"
+                        height="200";
+                        width="200";>
+
+                        <p style="text-align:justify; font-size: 17px;"> I attend this school from I was in standard 1 until standard 6. This school was beside my primary school. Moreover, the school was near with my home
+                            so it is easy for me to go to school which take like 10 minutes from home by walk. </p>
+                        </div>
+                    </div>
+                
+                    <br>  
+                
+                    <b>Maps</b>
+                        <div class="mapouter"><div class="gmap_canvas"><iframe width="269" height="254" id="gmap_canvas" src="https://maps.google.com/maps?q=Sk%20seksyen%207%20Kota%20damansara&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-a.com"></a><br><style>.mapouter{position:relative;text-align:right;height:254px;width:269px;}</style>
+                            <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                            <style>.gmap_canvas {overflow:hidden;background:none!important;height:254px;width:269px;}</style></div></div>
+                    
+                
+                </div>
+            </div>
+            
+              
+              <!--Highschool-->
+            <div class="w3-container w3-center w3-animate-opacity">
+                <div class="main" id="section2">
+                
+                    <div class="right">
+                        <a href="#section3" class="next">Next</a>
+                    </div>
+
+                    <h2 style="font-family:verdana; text-align:center;">Highschool</h2>
+                    <h3 style="text-align:center;"><i>Sekolah Menengah Kebangsaan Seksyen 8 Kota Damansara.</i>
+                    <style>
+                        div { text-align: center;
+                        }
+                    </style>
+                    </h3>
+                    
+                    <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/2.png"
+                    width="200"
+                    height="200">
+
+                    <br>
+                    <p style="font-size: 17px;"> This is the class I got throughout being a student here: </p>
+                    <div class="rowT">
+                        <div class="columnT">
+                        
+                            <table>
+                            
+                                <tr>
+                                    <th>Year</th>  
+                                    <th>Class</th>
+                                </tr>
+                            
+                                <tr>
+                                    <td>2014</td>
+                                    <td>1 Keruing</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2015</td>
+                                    <td>2 Jelutong</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2016</td>
+                                    <td>3 Einstein</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2017</td>
+                                    <td>4 Budiman</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2018</td>
+                                    <td>5 Budiman</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+            
+
+                <br>
+                
+                <b>Map</b>
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="269" height="254" id="gmap_canvas" src="https://maps.google.com/maps?q=Smk%20seksyen%208%20Kota%20damansara&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://123movies-a.com"></a><br><style>.mapouter{position:relative;text-align:right;height:254px;width:269px;}</style>
+                    <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:254px;width:269px;}</style></div></div>
+
+                    
+                </div>
+            </div>
+            
+
+              <!--University-->
+            <div class="w3-container w3-center w3-animate-left">
+                <div class="main" id="section3">
+                    <h2 style=" text-align: center;"> University</h2>
+                        <h3 style="text-align: center;"> <i>Universiti Teknologi Mara</i></h3>
+                
+                <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/Logo UiTM.png"
+                width="200"
+                height="200">
+                
+                <br>
+                
+                    <ul id="University">
+                        <li>
+                            <p>Uitm Branch: Negeri Sembilan</p>
+                        </li>
+                        
+                        <li>
+                            <p>Campus: Rembau</p>
+                        </li>
+                        
+                        <li>
+                            <p>Course: <abbr title="Diploma in Information Management">DIM / IM110 </abbr> </p>
+                        </li>
+                        
+                        <li>
+                            <p>Faculty: <abbr title="Faculty of Information Management"> FIM </abbr> </p>
+                        </li>
+                        
+                    </ul>
+
+                    <video style="display:block; margin-left: auto; margin-right: auto;"width="320" height="240" controls>
+                        <source  src="Video/VID-20191127-WA0065.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <br>
+
+                    <p style="text-align: center;"><b>This is the girls from my class.</b></p>
+                    
+                    <br>
+
+                    <p>The subject that I have been studied so far in this course:</p>
+
+                    <b>Part 1</b>
+
+                    <div class="rowT">
+                        <div class="columnT">
+                        
+                            <table>
+                            
+                                <tr>
+                                    <th>Course</th>  
+                                    <th>Course Description</th>
+                                    <th>Credit Hour</th>
+                                    
+                                </tr>
+                            
+                                <tr>
+                                    <td>CTU101</td>
+                                    <td>Fundamentals of Islam</td>
+                                    <td>2.0</td>
+                                    
+                                </tr>
+                        
+                                <tr>
+                                    <td>ELC121</td>
+                                    <td>Integrated Language Skills I</td>
+                                    <td>3.0</td>
+                                    
+                                </tr>
+                        
+                                <tr>
+                                    <td>HBU111</td>
+                                    <td>National Kesatria I</td>
+                                    <td>1.0</td>
+                                    
+                                </tr>
+                        
+                                <tr>
+                                    <td>IMD111</td>
+                                    <td>Introduction to Information Skills</td>
+                                    <td>3.0</td>
+                                    
+                                </tr>
+                        
+                                <tr>
+                                    <td>IMD112</td>
+                                    <td>Introduction to Information Management</td>
+                                    <td>3.0</td>
+                                    
+                                </tr>
+
+                                <tr>
+                                    <td>IMD113</td>
+                                    <td>Information and Communication Technology Application</td>
+                                    <td>3.0</td>
+                                    
+                                </tr>
+
+                                <tr>
+                                    <td>MGT162</td>
+                                    <td>Fundamentals of Management</td>
+                                    <td>3.0</td>
+                                    
+                                </tr>
+
+                                <tr>
+                                    <td>UED102</td>
+                                    <td>Study Skills</td>
+                                    <td>0.0</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+<br>
+                    <b>Part 2:</b>
+                    <div class="rowT">
+                        <div class="columnT">
+                        
+                            <table>
+                            
+                                <tr>
+                                    <th>Course</th>  
+                                    <th>Course Description</th>
+                                    <th>Credit Hour</th>
+                                    
+                                </tr>
+
+                                <tr>
+                                    <td>ELC151</td>
+                                    <td>Integrated Language Skills II</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>HBU121</td>
+                                    <td>National Kesatria II</td>
+                                    <td>1.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD121</td>
+                                    <td>Communication Skills for Information Professional</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD122</td>
+                                    <td>Introduction to School Resource Center</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD123</td>
+                                    <td>Foundation of Records Management</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD124</td>
+                                    <td>Access to Information</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+<br>
+                    <b>Part 3:</b>
+                    <div class="rowT">
+                        <div class="columnT">
+                        
+                            <table>
+                            
+                                <tr>
+                                    <th>Course</th>  
+                                    <th>Course Description</th>
+                                    <th>Credit Hour</th>
+                                    
+                                </tr>
+
+                                <tr>
+                                    <td>CTU264</td>
+                                    <td>Islamic Information Management</td>
+                                    <td>2.0</td> 
+                                </tr>
+
+                                <tr>
+                                    <td>ELC231</td>
+                                    <td>Integrated Language Skills II</td>
+                                    <td>3.0</td> 
+                                </tr>
+
+                                <tr>
+                                    <td>HBU131</td>
+                                    <td>National Kesatria III</td>
+                                    <td>1.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD211</td>
+                                    <td>Intructional Media Application</td>
+                                    <td>3.0</td> 
+                                </tr>
+
+                                <tr>
+                                    <td>IMD212</td>
+                                    <td>Introduction to Electornic Records Keeping</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD213</td>
+                                    <td>Organization of Information</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD214</td>
+                                    <td>Electronic Publishing</td>
+                                    <td>3.0</td>  
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+<br>
+                    <b>Part 4:</b>
+                    <div class="rowT">
+                        <div class="columnT">
+                        
+                            <table>
+                                <tr>
+                                    <th>Course</th>  
+                                    <th>Course Description</th>
+                                    <th>Credit Hour</th>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD221</td>
+                                    <td>Social Media Literacy</td>
+                                    <td>2.0</td>  
+                                </tr>
+
+                                <tr>
+                                    <td>IMD222</td>
+                                    <td>Technical Support Services and Maintenance for Information Agencies</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD223</td>
+                                    <td>Introduction to Cataloging</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD224</td>
+                                    <td>Management of Records Center</td>
+                                    <td>3.0</td> 
+                                </tr>
+
+                                <tr>
+                                    <td>IMD225</td>
+                                    <td>Information Technology Application in Information Agencies</td>
+                                    <td>3.0</td>  
+                                </tr>
+
+                                <tr>
+                                    <td>IMD226</td>
+                                    <td>Multimedia for Information Presentation</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD227</td>
+                                    <td>Promotion of Information Products and Services</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+<br>
+                    <b>Part 5:</b>
+                    <div class="rowT">
+                        <div class="columnT">
+                        
+                            <table>
+                                <tr>
+                                    <th>Course</th>  
+                                    <th>Course Description</th>
+                                    <th>Credit Hour</th>
+                                </tr>
+
+                                <tr>
+                                    <td>ENT300</td>
+                                    <td>Fundamentals of Entrepreneurship</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD311</td>
+                                    <td>Introduction to Web Content Management and Design</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD312</td>
+                                    <td>Reference and Information Services for Information Agencies</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD313</td>
+                                    <td>Foundation of Archives</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD314</td>
+                                    <td>Extension Services for Information Agencies</td>
+                                    <td>3.0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>IMD315</td>
+                                    <td>Management of Libraries and Resource Center</td>
+                                    <td>3.0</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                
+                
+                    
+                
+                <br>
+                    
+                <b>Map</b>
+                <br>
+                   <!-- Image Map Generated by http://www.image-map.net/ -->
+            <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/peta-Negeri-Sembilan.png" usemap="#image-map">
+
+        <map name="image-map">
+            <area target="_blank" alt="UiTM Negeri Sembilan Kampus Rembau" title="UiTM Negeri Sembilan Kampus Rembau" href="https://nsembilan.uitm.edu.my/rembau/" coords="195,491,202,498,210,494,214,485,218,479,228,485,242,481,256,477,268,466,277,457,288,457,295,462,293,447,286,436,290,427,280,418,277,406,263,393,251,382,241,375,241,360,244,342,229,337,221,347,207,349,200,337,194,333,185,335,175,330,168,332,162,340,171,357,175,365,160,366,152,365,140,363,136,370,128,363,113,366,107,363,99,353,99,344,85,347,79,360,88,372,94,361,105,380,108,370,126,385,131,399,137,415,142,422,140,430,156,434,162,426,160,415,182,416,185,431,196,431" shape="poly">
+        </map>
+                    
+                <br>
+                    
+                <div class="right">
+                    <a href="#section1" class="previous">Top  
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+              
+              
+                
+    </div>
+        <br>
+                
+    </div>
+    
+    <br>
+    
+    <!--Footer-->
+    <div class="footer">
+        <p>Copyright 2022 Nur Alyssa Syafiqah Zainon </p>
+        
+    </div>
+   
+        
+    </body>   
+
+  
+</html>

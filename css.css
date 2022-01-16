@@ -1,0 +1,255 @@
+
+body{
+    font-family: "work sans", sans-serif;
+    margin-left: 300px;
+    margin-top: 300px;
+    background: #d9d9d9;
+}
+.time{
+    background-color: #85dcb8;
+    color: rgb(29, 28, 26);
+    border: 7px solid hsl(0, 100%, 99%);
+    box-shadow: 0 2px 10 px rgb(rgb(202, 157, 157)),
+                0 2px 10 px rgb(rgb(199, 154, 154));
+    padding: 8px;
+    text-align: center;
+    width: 300px;
+
+}
+
+.hms{
+    font-size: 15pt;
+    font-weight: 200;
+    text-align: center;
+}
+.ampm{
+    font-size: 15pt;
+    text-align: center;
+
+}
+.date{
+    font-size: 15pt;
+    text-align: center;
+}
+
+.center {
+    margin: 50px;
+    border: 3px solid #ffffff;
+    padding: 10px;
+    background-color: #d2fdff;
+         
+       }
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    }
+      
+.active, .accordion:hover {
+    background-color: #ccc; 
+      }
+      
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.footer {
+    position:static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F4976C;
+    color: black;
+    text-align: center;
+    font-size: 10pt;
+    padding: 10px;
+             
+           }
+
+.right {
+    text-align: right;
+          } 
+
+.centerT {
+    text-align: center;
+}
+
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #F4976C;
+    color: rgb(247, 244, 244);
+            }
+
+.header h1 {
+    font-size: 40px;
+            }
+
+.topnav {
+    overflow: visible;
+    background-color: #B4DFE5;
+    
+    } 
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #020202;
+    text-align: center;
+    padding: 30px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+
+.topnav a:hover {
+    background-color: #303C6C;
+    color: rgb(253, 252, 252);
+}
+
+.topnav a.active {
+    background-color: #B4DFE5;
+    color: rgb(0, 0, 0);
+
+}
+
+.topnav .icon {
+    display: none;
+
+}
+
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child) {display:none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+        }
+    }
+@media screen and (max-width: 600px) {
+.topnav .responsive {position: static;}
+    .topnav .responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+         
+
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;       
+               }
+           } 
+
+.row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+.side {
+    flex: 30%;
+    padding: 20px;
+    text-align: justify;
+        }
+
+.main {
+    flex: 70%;
+    padding: 20px;
+    text-align: justify;
+} 
+
+.dropbtn {
+    background-color: #B4DFE5;
+    color: rgb(0, 0, 0);
+    padding: 30px 32px;
+    font-size: 16px;
+    border: none;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f5f6fc;
+    min-width: auto;
+    box-shadow: auto rgb(255, 250, 250);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: rgb(7, 7, 7);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown-content a:hover {background-color: #303C6C;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+.dropdown:hover .dropbtn {background-color: #303C6C;
+color: rgb(255, 255, 255);}
+ 
+.fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+.fa:hover {
+      opacity: 0.7;
+  }
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+.fa-yahoo {
+    background: #430297;
+    color: white;
+  }
+
+.zoom {
+    padding: 50px;
+    transition: transform .2s;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    
+  }
+  
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  } 
+
+ 
+
+
+
+
+           

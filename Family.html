@@ -1,0 +1,301 @@
+<html lang="en">
+<head>
+<title>Family</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css.css">
+<link rel="shortcut icon" href="Image/favicon_io/android-chrome-192x192.png">
+<link rel="stylesheet" href="Family.css">
+        
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }    
+</style>
+</head>
+
+<body>
+
+    <style>
+        body
+            {
+                background-image: url("Image/Familybg.png");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;        
+            } 
+    </style>
+
+<!--Navbar-->
+
+<div class="header">
+    <h1>Family</h1>
+    <h4>created by Nur Alyssa Syafiqah bt Zainon</h4>
+    <p style="text-align: center;">This page was last modified <span id="demo"></span></p>
+    <a href="https://twitter.com/huethue" target="_blank" class="fa fa-twitter"></a>
+    <a href="https://www.instagram.com/xlyss4_/?hl=en" target="_blank" class="fa fa-instagram"></a>
+    <a href="https://compose.mail.yahoo.com/?to=nuralyssa.syafiqah@yahoo.com" class="fa fa-yahoo" target="_blank"></a>
+
+    <script>
+        document.getElementById("demo").innerHTML = document.lastModified;
+    </script>
+</div>
+
+<div class="topnav" id="myTopnav">
+    <img style="float: right;"src="Image/Logo.png" alt="Logo"
+    width="80"
+    height="80">
+    
+    <a href="index.html" class="active">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">About Me</button>
+        <div class="dropdown-content">
+          <a href="Profile.html" target="_blank">Profile</a>
+          <a href="Education.html" target="_blank" >Education </a>
+          <a href="Family.html" target="_blank" >Family </a>
+          <a href="Experience.html" target="_blank">Experience </a>
+      </div>
+    </div>
+    <a href="Gallery.html"  > Gallery</a>
+    <a href="Acknowledgement.html">Acknowledgement </a>
+    
+
+</div>
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+    x.className += " responsive";
+    } else {
+    x.className = "topnav";
+        }
+    }
+</script>
+
+<br>
+<!--Time-->
+
+    <div class="time">
+    <!--for time-->
+        <div class="hms"></div>
+        <!--For AM/PM-->
+        <div class="ampm"></div>
+        <!--For date-->
+        <div class="date"></div>
+    </div>
+ 
+ 
+    <!--Add js code-->
+    <script>
+        function updateTime(){
+        var dateInfo = new Date();
+ 
+        /* time*/
+        var hr,
+        _min = (dateInfo.getMinutes() <10) ? "0" + dateInfo.getMinutes() : dateInfo.getMinutes(),
+        sec = (dateInfo.getSeconds() <10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
+        ampm = (dateInfo.getHours() >= 12) ? "PM" : "AM";
+        // replace 0 with 12 at midnight, subject 12 form hour if 13-23
+        if(dateInfo.getHours()== 0){
+        hr =12;
+        } else if (dateInfo.getHours() > 12){
+        hr = dateInfo.getHours() - 12;
+        } else{
+        hr = dateInfo.getHours();
+    }
+             
+    // current time
+        var currentTime = hr + ":" + _min + ":" + sec;
+    //print time
+        document.getElementsByClassName("hms")[0].innerHTML = currentTime;
+        document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+    /* date */
+        var dow = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+            ],
+ 
+            month = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+            ],
+            day = dateInfo.getDate();
+            year = dateInfo.getFullYear();
+ 
+            //store date
+            var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + " " + day + ", " + year; 
+ 
+            document.getElementsByClassName("date")[0].innerHTML = currentDate;
+ 
+         }; 
+ 
+//print time and date once, then update then every second
+ 
+        updateTime();
+        setInterval(function(){
+        updateTime()
+        }, 1000);
+ 
+       </script>
+
+<!--Layout-->
+<div class="row">
+    <div class="side">
+        <div class="center">
+            
+            <style>
+            div { text-align: justify;
+            }
+            </style>
+            <h2> This is My Family</h2>
+        
+            <br>
+                         
+            <p style="text-align: justify;"> I only have a small family where there are only my father, mother, two brothers and me. Besides that,
+            I am the youngest and only daughter in my family. All my brother currently working at their own workplace and I am the only one who still study.</p> 
+
+            <p style="text-align: justify;" ><b>To know our name, you can just drag the cursor to the image</b></p>
+            <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/Family.gif"
+            width="200"
+            height="150">
+            <br>
+            <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/We are family.gif"
+            width="200"
+            height="150">
+        
+          
+    
+        </div>
+
+        <div class="center">
+            <h3 style="text-align: center;" >Credits</h3>
+            <p style="text-align:justify; font-size: 17px;font-family: monospace;">Prepared by: Nur Alyssa Syafiqah Binti Zainon
+            <p style="text-align:justify; font-size: 17px; font-family: monospace;"> Group: N5IM1105G </p>
+            <p style="text-align:justify; font-size: 17px; font-family: monospace;">Prepared for: Seri Intan Idayu Shahrul Asari</p>
+            </p>
+        </div>  
+        
+        <audio controls>
+            <source src="Audio/Jujutsu Kaisen OP - 'Kaikai Kitan' - Eve (Piano).mp3"
+            type="audio/mpeg">  
+        </audio>
+        
+        <p><a href= "https://www.youtube.com/watch?v=pOAf4UoqFq0" target="_blank">by Fonzi M - Melodies on Piano </a></p>    
+    </div>
+
+    <div class="main">
+        <div class="center">
+            <style>
+                div { text-align: center;
+                }
+            </style>
+
+        
+        <h2>This is my family.</h2>
+        
+        <br>
+
+        <p><b>Father</b></p>
+        <div class="container">
+            <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/Abah.jpg" alt="Abah" class="image">
+            <div class="overlay">Zainon Bin Sudin</div>
+        </div>
+
+        <br>
+
+        <p><b>Mother</b></p>
+            <div class="container">
+                <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/Emak.jpg" alt="Emak" class="image">
+                <div class="overlay">Dahariyah Binti Yahya</div>
+            </div>
+
+          <br>
+
+        <p><b>Eldest Brother</b></p>
+            <div class="container">
+                <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/Ayong.jpg" alt="Along" class="image">
+                <div class="overlay">Mohamad Ridzuan Bin Zainon</div>
+            </div>
+
+          <br>
+
+        <p><b>Elder Brother</b></p>
+            <div class="container">
+                <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/Angah.jpg" alt="Angah" class="image">
+                <div class="overlay">Mohamad Shahmir Bin Zainon</div>
+            </div>
+
+          <br>
+
+        <p><b>Me</b></p>
+            <div class="container">
+                <img style="display:block; margin-left: auto; margin-right: auto;" src="Image/IMG_20201222_151505_641.jpg" alt="myself" class="image">
+                <div class="overlay">Nur Alyssa Syafiqah Binti Zainon</div>
+            </div>
+
+          <br>
+
+        <p><b>My Cat</b></p>
+            <div class="container">
+                <video style="display:block; margin-left: auto; margin-right: auto;" width="300" height="400" autoplay loop>
+                    <source src="Video/VID_66710107_193141_288.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">Itam</div>
+            </div>
+         
+    </div>
+
+    <script>
+        var acc =
+        document.getElementsByClassName("accordion");
+        var i;
+
+        for(i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";   
+        } else {
+        panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    </div>
+</div>
+
+    <br>
+
+ <!--Footer-->
+ <div class="footer">
+    <p>Copyright 2022 Nur Alyssa Syafiqah Zainon </p>
+    
+</div>
+</body>        
+ 
+</html>
