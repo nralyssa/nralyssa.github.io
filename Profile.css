@@ -14,3 +14,16 @@
   .adaptability {width: 60%; background-color: #2196F3;}
   .Microsoft {width: 65%; background-color: #f44336;}
   .data {width: 70%; background-color: #808080;}
+
+  .columnP {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .rowP::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
