@@ -1,0 +1,16 @@
+.containerS {
+    width: 100%;
+    background-color: #ddd;
+  }
+  
+  .skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  
+  .problemsolving {width: 80%; background-color: #d17b19;}
+  .adaptability {width: 60%; background-color: #2196F3;}
+  .Microsoft {width: 65%; background-color: #f44336;}
+  .data {width: 70%; background-color: #808080;}
