@@ -77,6 +77,19 @@ body{
              
            }
 
+.footer2 {
+    position:static;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    background-color: #F4976C;
+    color: black;
+    text-align: center;
+    font-size: 10pt;
+    padding: 10px;
+                  
+ }
+
 .right {
     text-align: right;
           } 
